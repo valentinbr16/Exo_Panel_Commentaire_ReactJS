@@ -47,7 +47,7 @@ export default function Comments() {
                         <CommentForm comments={comments} setComments={setComments}/>
                     </div>
                     <div className="column">
-                        <CommentList isNotAdmin={isNotAdmin} comments={comments}/>
+                        <CommentList isNotAdmin={isNotAdmin} comments={comments} setComments={setComments} />
                     </div>
                 </div>
             </div>
