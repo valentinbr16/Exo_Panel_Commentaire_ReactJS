@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 export default function CommentForm({comments, setComments}) {
 
@@ -9,7 +10,8 @@ export default function CommentForm({comments, setComments}) {
     e.preventDefault();
     let newComment = {
       name: name,
-      body: message
+      body: message,
+      id: uuidv4()
     }
      let newComments = [...comments, newComment];
     setComments(newComments);
